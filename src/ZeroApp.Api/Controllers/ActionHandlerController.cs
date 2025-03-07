@@ -5,28 +5,24 @@ using ZeroApp.Api.Handlers;
 namespace ZeroApp.Api.Controllers;
 
 [ApiController]
-[Route("api/requests")]
-internal class ActionHandlerController : ControllerBase
+[Route("api/actions")]
+public class ActionHandlerController : ControllerBase
 {
     [HttpPost]
-    [Route("")]
-    public async Task<IActionResult> Execute([FromForm] JsonElement unknownRequest)
+    [Route("request")]
+    public async Task<IActionResult> Execute([FromForm] Dictionary<string, string> unknownRequestJson)
     {
-        var hasActionField = unknownRequest.TryGetProperty(
-            "Action",
-            out var actionElement
-        );
-
-        var isActionString = actionElement.ValueKind == JsonValueKind.String;
-
-        var isValidAction = hasActionField && isActionString && !string.IsNullOrWhiteSpace(actionElement.GetString());
-
-        if (!isValidAction)
+        if (!unknownRequestJson.TryGetValue(
+                "action",
+                out var action
+            ) || string.IsNullOrWhiteSpace(action))
         {
             return BadRequest("Action field is required.");
         }
 
-        var action = actionElement.GetString()!;
+        var json = JsonSerializer.Serialize(unknownRequestJson);
+        var jsonDocument = JsonDocument.Parse(json);
+        var unknownRequest = jsonDocument.RootElement;
 
         var handler = ActionHandlerRegistry.GetHandler(action);
 

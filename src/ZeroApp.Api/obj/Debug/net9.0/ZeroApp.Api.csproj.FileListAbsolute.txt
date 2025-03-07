@@ -26,3 +26,9 @@ C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\refint\ZeroApp.Api.
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.pdb
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.genruntimeconfig.cache
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ref\ZeroApp.Api.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\FluentValidation.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\ZeroApp.Core.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\ZeroApp.Core.pdb
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.csproj.AssemblyReference.cache
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.sourcelink.json
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp..AAD0E2B4.Up2Date

@@ -1,0 +1,13 @@
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\bin\Debug\net9.0\ZeroApp.Core.deps.json
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\bin\Debug\net9.0\ZeroApp.Core.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\bin\Debug\net9.0\ZeroApp.Core.pdb
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.csproj.AssemblyReference.cache
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.AssemblyInfoInputs.cache
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.AssemblyInfo.cs
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.csproj.CoreCompileInputs.cache
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.sourcelink.json
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\refint\ZeroApp.Core.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ZeroApp.Core.pdb
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Core\obj\Debug\net9.0\ref\ZeroApp.Core.dll

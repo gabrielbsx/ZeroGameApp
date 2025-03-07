@@ -10,12 +10,12 @@ public static class ActionHandlerRegistry
     private static readonly Dictionary<string, Func<JsonElement, Task<IActionResult>>> ActionHandlers = new();
 
     public static void AddHandler<TRequest, TResponse, THandler>(
+        string actionName,
         IValidator<TRequest> validator,
         THandler handler)
         where TRequest : class
         where THandler : IRequestHandler<TRequest, TResponse>
     {
-        var actionName = typeof(TRequest).Name;
         if (!ActionHandlers.ContainsKey(actionName))
         {
             ActionHandlers[actionName] = async requestData =>

@@ -27,6 +27,7 @@ public static class RegisterHandlerExtensions
         ActionHandlerRegistry
             .AddHandler<RegisterUserRequest, RegisterUserResponse,
                 IRequestHandler<RegisterUserRequest, RegisterUserResponse>>(
+                "registerUser",
                 registerUserValidator,
                 registerUserHandler
             );
