@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CUR/edmRqEI=",
+  "success": true,
+  "projectFilePath": "C:\\Trabalho\\2025\\hz\\ZeroApp\\src\\ZeroApp.Api\\ZeroApp.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriel Barbosa\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}

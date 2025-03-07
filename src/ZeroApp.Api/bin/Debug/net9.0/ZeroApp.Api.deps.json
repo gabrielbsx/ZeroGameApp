@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ZeroApp.Api/1.0.0": {
+        "runtime": {
+          "ZeroApp.Api.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZeroApp.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
