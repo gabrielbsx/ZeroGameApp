@@ -32,3 +32,7 @@ C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\ZeroApp.Core.pdb
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.csproj.AssemblyReference.cache
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.sourcelink.json
 C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp..AAD0E2B4.Up2Date
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\SharpGrip.FluentValidation.AutoValidation.Mvc.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\bin\Debug\net9.0\SharpGrip.FluentValidation.AutoValidation.Shared.dll
+C:\Trabalho\2025\hz\ZeroApp\src\ZeroApp.Api\obj\Debug\net9.0\ZeroApp.Api.MvcApplicationPartsAssemblyInfo.cs

@@ -1,6 +1,6 @@
 using ZeroApp.Core.Requests;
 
-namespace ZeroApp.Core.Features.RegisterUserFeature;
+namespace ZeroApp.Core.Features.RegisterUser;
 
 public sealed record RegisterUserRequest(
     string Name,
@@ -11,13 +11,23 @@ public sealed record RegisterUserRequest(
     bool CreateCharacter,
     string Gender,
     // Default Request Values
+    string Action,
     string UserId,
     string UserSessionId,
     string ClientVersion,
-    string Action
+    int BuildNumber,
+    string Auth,
+    int Rct,
+    bool KeepAlive,
+    string DeviceType
 ) : DefaultRequestValues(
+    Action,
     UserId,
     UserSessionId,
     ClientVersion,
-    Action
+    BuildNumber,
+    Auth,
+    Rct,
+    KeepAlive,
+    DeviceType
 );

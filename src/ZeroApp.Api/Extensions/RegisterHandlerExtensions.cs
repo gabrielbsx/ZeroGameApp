@@ -1,7 +1,8 @@
 using FluentValidation;
-using ZeroApp.Api.Handlers;
+using ZeroApp.Api.ActionRegistry;
 using ZeroApp.Core.Contracts;
-using ZeroApp.Core.Features.RegisterUserFeature;
+using ZeroApp.Core.Features.CreateCharacter;
+using ZeroApp.Core.Features.RegisterUser;
 
 namespace ZeroApp.Api.Extensions;
 
@@ -9,23 +10,12 @@ public static class RegisterHandlerExtensions
 {
     public static void UseRegisterHandler(this IServiceCollection services)
     {
-        services.AddValidatorsFromAssemblyContaining<RegisterUserValidation>();
-
         // Registrar Validators
-        services.AddScoped<IValidator<RegisterUserRequest>, RegisterUserValidation>();
+        services.AddValidatorsFromAssemblyContaining<RegisterUserValidation>();
+        services.AddValidatorsFromAssemblyContaining<CreateCharacterValidation>();
 
         // Registrar Handlers
         services.AddScoped<IRequestHandler<RegisterUserRequest, RegisterUserResponse>, RegisterUserCommand>();
-
-        // RegisterUser
-        var registerUserValidator = services.BuildServiceProvider().GetRequiredService<IValidator<RegisterUserRequest>>();
-        var registerUserHandler = services.BuildServiceProvider().GetRequiredService<IRequestHandler<RegisterUserRequest, RegisterUserResponse>>();
-        ActionHandlerRegistry
-            .AddHandler<RegisterUserRequest, RegisterUserResponse,
-                IRequestHandler<RegisterUserRequest, RegisterUserResponse>>(
-                "registerUser",
-                registerUserValidator,
-                registerUserHandler
-            );
+        services.AddScoped<IRequestHandler<CreateCharacterRequest, CreateCharacterResponse>, CreateCharacterCommand>();
     }
 }

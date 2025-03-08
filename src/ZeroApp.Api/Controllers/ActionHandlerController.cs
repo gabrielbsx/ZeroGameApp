@@ -1,6 +1,6 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using ZeroApp.Api.Handlers;
+using ZeroApp.Api.ActionRegistry;
 
 namespace ZeroApp.Api.Controllers;
 
@@ -28,7 +28,7 @@ public class ActionHandlerController : ControllerBase
 
         if (handler != null)
         {
-            return await handler(unknownRequest);
+            return await handler.Invoke(HttpContext.RequestServices, unknownRequest);
         }
 
         return NotFound("Action not found");
