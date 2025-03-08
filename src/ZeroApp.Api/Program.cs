@@ -5,12 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddFluentValidationAutoValidation();
-builder.Services.UseRegisterHandler();
-builder.Services.UseAutoRegisterHandlers();
+builder.Services.UseZeroApp();
 
 var app = builder.Build();
 
-app.UseRouting();
-app.MapControllers();
+app.Configure();
 
-app.Run();
+await app.RunAsync();

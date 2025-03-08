@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace ZeroApp.Core.Features.CreateCharacter;
+namespace ZeroApp.Core.Features.Commands.CreateCharacter;
 
 public class CreateCharacterValidation : AbstractValidator<CreateCharacterRequest>
 {

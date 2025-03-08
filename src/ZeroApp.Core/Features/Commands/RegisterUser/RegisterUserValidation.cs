@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace ZeroApp.Core.Features.RegisterUser;
+namespace ZeroApp.Core.Features.Commands.RegisterUser;
 
 public class RegisterUserValidation : AbstractValidator<RegisterUserRequest>
 {

@@ -1,4 +1,4 @@
-namespace ZeroApp.Core.Features.RegisterUser;
+namespace ZeroApp.Core.Features.Commands.RegisterUser;
 
 public sealed record RegisterUserResponse(
     string UserId

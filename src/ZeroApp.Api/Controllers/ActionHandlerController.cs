@@ -1,6 +1,6 @@
-using System.Text.Json;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ZeroApp.Api.ActionRegistry;
+using ZeroApp.Api.Helpers;
 
 namespace ZeroApp.Api.Controllers;
 
@@ -8,29 +8,19 @@ namespace ZeroApp.Api.Controllers;
 [Route("api/actions")]
 public class ActionHandlerController : ControllerBase
 {
+    private readonly IMediator _mediator;
+    
+    public ActionHandlerController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
     [HttpPost]
     [Route("request")]
-    public async Task<IActionResult> Execute([FromForm] Dictionary<string, string> unknownRequestJson)
+    public async Task<IActionResult> Execute([FromForm] Dictionary<string, string> unknownFormData)
     {
-        if (!unknownRequestJson.TryGetValue(
-                "action",
-                out var action
-            ) || string.IsNullOrWhiteSpace(action))
-        {
-            return BadRequest("Action field is required.");
-        }
-
-        var json = JsonSerializer.Serialize(unknownRequestJson);
-        var jsonDocument = JsonDocument.Parse(json);
-        var unknownRequest = jsonDocument.RootElement;
-
-        var handler = ActionHandlerRegistry.GetHandler(action);
-
-        if (handler != null)
-        {
-            return await handler.Invoke(HttpContext.RequestServices, unknownRequest);
-        }
-
-        return NotFound("Action not found");
+        var request = ActionValidateAndConvert.ValidateAndConvert(unknownFormData);
+        var response = await _mediator.Send(request);
+        return Ok(response);
     }
 }
